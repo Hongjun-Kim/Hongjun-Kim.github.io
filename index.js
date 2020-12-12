@@ -1,3 +1,4 @@
+import test from "./js/test.js";
 import "./scss/index.scss";
 
 const run = () => {
@@ -5,3 +6,4 @@ const run = () => {
 };
 
 run();
+test();
