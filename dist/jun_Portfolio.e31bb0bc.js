@@ -117,21 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/test.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var test = function test() {
-  console.log("this is from the Test File");
-};
-
-var _default = test;
-exports.default = _default;
-},{}],"../../../usr/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+})({"../../../usr/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -206,18 +192,14 @@ module.hot.accept(reloadCSS);
 },{"_css_loader":"../../../usr/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
-var _test = _interopRequireDefault(require("./js/test.js"));
-
 require("./scss/index.scss");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var run = function run() {
   console.log("Yo i am runnin");
 };
 
-(0, _test.default)();
-},{"./js/test.js":"js/test.js","./scss/index.scss":"scss/index.scss"}],"../../../usr/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+run();
+},{"./scss/index.scss":"scss/index.scss"}],"../../../usr/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -245,7 +227,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "42481" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "36135" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
