@@ -1,0 +1,28 @@
+$default-color: #fff;
+$backgroud-color: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+$font-color: #000;
+
+@mixin mq($size) {
+  @media only screen and (min-width: $size) {
+    @content;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: $default-color;
+  width: 100%;
+  min-height: 100%;
+  @include mq(768px) {
+    font-size: 22px;
+  }
+}
+body {
+  background-image: $backgroud-color;
+}
