@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.js"],"names":["run","console","log"],"mappings":";;;AAMG,aANH,QAAA,qBAEA,IAAMA,EAAM,WACVC,QAAQC,IAAI,mBAGdF","file":"jun_Portfolio.2cc1521f.js","sourceRoot":"..","sourcesContent":["import \"./scss/index.scss\";\n\nconst run = () => {\n  console.log(\"Yo i am runnin\");\n};\n\nrun();\n"]}
