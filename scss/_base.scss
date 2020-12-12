@@ -1,12 +1,33 @@
-$default-color: #fff;
-$backgroud-color: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
-$font-color: #000;
+// fonts
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+$base-fonts: "Poppins", sans-serif;
+
+// colors
+$bg-color: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+$primary-color: #fff;
+$secondary-color: #0000ee;
 
 @mixin mq($size) {
-  @media only screen and (min-width: $size) {
+  @media screen and (max-width: $size) {
     @content;
   }
 }
+@mixin mqm($size) {
+  @media screen and (min-width: $size) {
+    @content;
+  }
+}
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -14,15 +35,21 @@ $font-color: #000;
 }
 html,
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: $base-fonts;
   font-size: 16px;
-  color: $default-color;
+  color: $primary-color;
   width: 100%;
   min-height: 100%;
-  @include mq(768px) {
+  @include mqm(768px) {
     font-size: 22px;
   }
 }
 body {
-  background-image: $backgroud-color;
+  background-image: $bg-color;
+  @include mq(768px) {
+    overflow-x: hidden;
+  }
 }
+// section{
+
+// }

@@ -8,7 +8,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel index.html --out-dir docs",
-    "build": "parcel build index.html --out-dir docs --public-url ./"
+    "build": "parcel build index.html --out-dir docs --public-url ./",
+    "deploy": "npm run build && git add . && git commit -a -m 'latest build' && git push origin master"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
