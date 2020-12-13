@@ -4,7 +4,7 @@ $base-fonts: "Poppins", sans-serif;
 
 // colors
 $bg-color: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
-$primary-color: #fff;
+$primary-color: rgb(266, 266, 266);
 $secondary-color: #0000ee;
 
 @mixin mq($size) {
@@ -12,19 +12,9 @@ $secondary-color: #0000ee;
     @content;
   }
 }
-@mixin mqm($size) {
+@mixin mp($size) {
   @media screen and (min-width: $size) {
     @content;
-  }
-}
-@keyframes navLinkFade {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0px);
   }
 }
 
@@ -40,15 +30,12 @@ body {
   color: $primary-color;
   width: 100%;
   min-height: 100%;
-  @include mqm(768px) {
+  @include mp(768px) {
     font-size: 22px;
   }
 }
 body {
   background-image: $bg-color;
-  @include mq(768px) {
-    overflow-x: hidden;
-  }
 }
 // section{
 
