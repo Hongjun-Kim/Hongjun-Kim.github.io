@@ -1,0 +1,418 @@
+.home {
+  .home__container {
+    height: calc(100vh - #{$header-height});
+    .home__data {
+      padding-top: 3rem;
+      .home__title {
+        align-self: center;
+        font-size: $big-font-size;
+        line-height: 1;
+        letter-spacing: 0.5rem;
+        margin-bottom: 2rem;
+        border-left: 3px solid $border-color;
+        padding-left: 5px;
+        span {
+          font-size: $h1-font-size;
+        }
+      }
+      .home__description {
+        color: $dark-color-light;
+        font-size: $small-font-size;
+        letter-spacing: 1px;
+        margin-bottom: 2rem;
+      }
+    }
+    .home__img {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 260px;
+      border-radius: 25% 25% 0 25%;
+    }
+  }
+}
+
+.about__container {
+  row-gap: 2rem;
+  .box__container {
+    display: grid;
+    row-gap: 2rem;
+    .about__box {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 1rem;
+      align-items: center;
+      padding: 0 1.5rem;
+      background-color: $gray-color;
+      transition: 0.3s;
+      border-radius: 10%;
+      &:hover {
+        transform: translate3d(-0.5rem, 1rem, 1rem);
+      }
+      &:hover .about__view {
+        text-decoration: underline;
+      }
+      i {
+        font-size: 100px;
+        align-items: center;
+        justify-content: center;
+        padding: 1.5rem 1rem 1.5rem 0.5rem;
+      }
+      &:nth-child(4) i {
+        padding-left: 25px;
+        padding-right: 25px;
+      }
+      .about__data {
+        .about__title {
+          //font-size: $h1-font-size;
+          margin-top: 2rem;
+          line-height: 1.5;
+          margin-bottom: $mb-2;
+          text-transform: uppercase;
+          font-weight: $font-semi;
+          font-size: $small-font-size;
+          .about__subtitle {
+            font-size: $h2-font-size;
+            color: $dark-color-light;
+          }
+        }
+        .about__view {
+          font-size: $small-font-size;
+          color: $dark-color-light;
+          margin-bottom: 6rem;
+        }
+      }
+    }
+  }
+  .about__text {
+    margin-top: $header-height;
+    .about__text-title {
+      border-left: 3px solid $border-color;
+      padding-left: 5px;
+      font-size: $h1-font-size;
+      margin-bottom: 2rem;
+    }
+    .about__text-subtitle {
+      font-weight: $font-semi;
+      font-size: $h1-font-size;
+      //border-bottom: 1px solid $gray-color;
+      margin-bottom: $mb-2;
+      padding-bottom: $mb-2;
+    }
+    .about__text-description {
+      color: $dark-color-light;
+      line-height: 2;
+      margin-bottom: 2rem;
+    }
+    a {
+      letter-spacing: 2px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 5rem 5rem 0 5rem;
+    }
+  }
+}
+.skills {
+  .box__container {
+    .about__box {
+      border-radius: 60px 60px 60px 0;
+      column-gap: 2rem;
+    }
+  }
+  .about__text {
+    margin-top: 0;
+    .about__text-image {
+      background: url(../img/Best-Programming-Languages-to-Start-Learning-Today.jpg)
+        no-repeat center/cover;
+      .about__text-data {
+        padding: 2.5rem 1rem;
+        background: rgba(0, 0, 0, 0.5);
+        color: $white-color;
+        .about__text-subtitle {
+          letter-spacing: 0.2rem;
+          text-transform: uppercase;
+          font-weight: $font-semi;
+        }
+      }
+    }
+  }
+}
+.portfolio__container {
+  row-gap: 2rem;
+  .portfolio__title {
+    border-left: 3px solid $border-color;
+    padding-left: 5px;
+    font-size: $h1-font-size;
+  }
+  .view__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    padding: 0px;
+    margin: 0px;
+    ul {
+      margin: 0px 0px 20px 0px;
+      padding: 0px;
+      text-align: center;
+      li {
+        display: inline-block;
+        margin: 10px 20px 10px 20px;
+        letter-spacing: 2px;
+      }
+    }
+  }
+  .box__container {
+    display: grid;
+    row-gap: 2rem;
+  }
+  .portfolio__box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    .portfolio__img {
+      height: 224px;
+      width: 100%;
+      object-fit: cover;
+    }
+    &:hover .portfolio__link {
+      bottom: 0;
+    }
+    .portfolio__link {
+      position: absolute;
+      bottom: -100%;
+      width: 100%;
+      height: 100%;
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      background: rgba(229, 89, 71, 0.2);
+      transition: 0.3s;
+      color: $white-color;
+      .portfolio__name {
+        margin: auto;
+      }
+      .portfolio__buttons {
+        display: inline-block;
+        margin: auto;
+        a {
+          color: $dark-color;
+          padding: 1rem;
+          span {
+            background: #ffd43a;
+            color: #2d1863;
+            height: 50px;
+            line-height: 50px;
+            width: 50px;
+            font-size: 18px;
+            border-radius: 200px;
+            padding: 0.8rem 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+.contact__container {
+  background: $white-color;
+  padding: $mb-4;
+  border-radius: 20px;
+  row-gap: 2rem;
+  .contact__title {
+    border-left: 3px solid $border-color;
+    padding-left: 5px;
+    font-size: $h1-font-size;
+  }
+  .contact__box {
+    .contact__data {
+      display: grid;
+      .contact__subtitle {
+        font-size: $h1-font-size;
+        font-weight: $font-bold;
+        color: $dark-color-light;
+        text-align: center;
+      }
+      .contact__description {
+        margin: $mb-4 0 $mb-4 0;
+        line-height: 2.5;
+      }
+    }
+    .button {
+      text-align: center;
+      width: 100%;
+      a {
+        color: $white-color;
+      }
+    }
+  }
+}
+
+.footer__container {
+  row-gap: 1.5rem;
+  margin-bottom: $mb-4;
+  .footer__img {
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+  }
+  .footer__copy {
+    text-align: center;
+  }
+  .footer__icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    i {
+      margin: 0.5rem;
+      font-size: 1.5rem;
+      &:hover {
+        color: $white-color;
+      }
+    }
+  }
+}
+
+@include mp(768px) {
+  body {
+    margin: 0;
+  }
+  .nav {
+    height: calc(#{$header-height} + 1rem);
+    justify-content: initial;
+    .nav__menu {
+      margin-left: auto;
+      .nav__list {
+        display: flex;
+        .nav__item {
+          margin-left: $mb-4;
+          margin-bottom: 0;
+        }
+      }
+    }
+    .nav__toggle {
+      display: none;
+    }
+  }
+  .home {
+    .home__container {
+      height: 100vh;
+      .home__data {
+        padding-top: 6rem;
+        .home__title {
+          line-height: 0.8;
+          letter-spacing: 1.5rem;
+        }
+      }
+      .home__img {
+        width: 370px;
+      }
+    }
+  }
+  .about__container {
+    .box__container {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 0;
+      .box__skewY {
+        transform: skewX(10deg);
+      }
+      .about__box.box__left {
+        margin: 0px 15px 30px 0px;
+      }
+      .about__box.box__right {
+        margin: 30px 0px 0px 15px;
+      }
+    }
+    .about__text {
+      .about__text-description {
+        line-height: 3;
+        letter-spacing: 0.09rem;
+      }
+      .button {
+        display: inline-block;
+        margin: 0;
+      }
+    }
+  }
+  .skills {
+    .about__box.box__right {
+      transform: translateY(40px);
+    }
+  }
+  .portfolio__container {
+    .box__container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 2rem;
+    }
+  }
+  .footer__container {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+  }
+}
+
+@include mp(1024px) {
+  .bg-grid {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .home .home__container .home__img {
+    right: 17rem;
+    bottom: 6rem;
+  }
+  .about__container {
+    grid-template-columns: repeat(2, 1fr);
+    .about__text {
+      .about__text-description {
+        line-height: 2.8;
+      }
+    }
+  }
+  .skills {
+    .about__box.box__right {
+      transform: translateY(100px);
+      &:hover a {
+        display: none;
+      }
+    }
+    .about__container {
+      grid-template-columns: repeat(2, 1fr);
+      .about__text {
+        .about__text-image {
+          position: absolute;
+          left: 20;
+          width: 400px;
+          height: 300px;
+          .about__text-data {
+            padding: 5.6rem 1rem;
+            // background: 0;
+          }
+        }
+      }
+      .box__container {
+        row-gap: 8.1rem;
+      }
+    }
+  }
+  .contact__container {
+    .contact__box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .button {
+        margin: 0 6rem 0 6rem;
+        width: auto;
+      }
+    }
+  }
+  .footer__container {
+    display: flex;
+    justify-content: space-between;
+    .footer__img {
+      margin: 0;
+    }
+  }
+}

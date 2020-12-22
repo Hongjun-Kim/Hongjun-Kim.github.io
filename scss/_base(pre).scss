@@ -1,0 +1,42 @@
+// fonts
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+$base-fonts: "Poppins", sans-serif;
+
+// colors
+$bg-color: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+$primary-color: rgb(266, 266, 266);
+$secondary-color: #0000ee;
+
+@mixin mq($size) {
+  @media screen and (max-width: $size) {
+    @content;
+  }
+}
+@mixin mp($size) {
+  @media screen and (min-width: $size) {
+    @content;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  font-family: $base-fonts;
+  font-size: 16px;
+  color: $primary-color;
+  width: 100%;
+  min-height: 100%;
+  @include mp(768px) {
+    font-size: 22px;
+  }
+}
+body {
+  background-image: $bg-color;
+}
+// section{
+
+// }

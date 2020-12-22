@@ -189,60 +189,52 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
+},{"./../img/Best-Programming-Languages-to-Start-Learning-Today.jpg":[["Best-Programming-Languages-to-Start-Learning-Today.7b9a9989.jpg","img/Best-Programming-Languages-to-Start-Learning-Today.jpg"],"img/Best-Programming-Languages-to-Start-Learning-Today.jpg"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 require("./scss/index.scss");
 
 // import nav from "./js/nav.js";
-var run = function run() {
-  console.log("Yo i am runnin");
-}; //run();
-// Selectors
-// Event Listeners
+// -----------------------------Selectors------------------------
+var navLink = document.querySelectorAll(".nav__link"); // -------------------------Event Listeners----------------------
 // Launch app
-
 
 document.addEventListener("readystatechange", function (event) {
   if (event.target.readyState === "complete") {
     initApp();
   }
-}); // Functions
+}); //linkActive
+
+navLink.forEach(function (n) {
+  return n.addEventListener("click", linkAction);
+});
+console.log(navLink); // ------------------------------Functions-----------------------
 
 var initApp = function initApp() {
-  nav();
+  showMenu("nav-toggle", "nav-menu");
 };
 
-var nav = function nav() {
-  var burger = document.querySelector(".burger");
-  var navlinks = document.querySelector(".nav-links");
-  var links = document.querySelectorAll(".nav-links li");
+var showMenu = function showMenu(toggleId, navId) {
+  var toggle = document.getElementById(toggleId),
+      nav = document.getElementById(navId);
 
-  if (!burger.style.display) {
-    navlinks.classList.remove("open");
-    burger.classList.remove("toggle");
-    links.forEach(function (link) {
-      link.classList.remove("fade");
+  if (toggle && nav) {
+    toggle.addEventListener("click", function () {
+      nav.classList.toggle("show");
     });
   }
-
-  window.addEventListener("resize", function () {
-    if (window.innerWidth >= 768) {
-      navlinks.classList.remove("open");
-      burger.classList.remove("toggle");
-      links.forEach(function (link) {
-        link.classList.remove("fade");
-      });
-    }
-  });
-  burger.addEventListener("click", function () {
-    navlinks.classList.toggle("open");
-    links.forEach(function (link) {
-      link.classList.toggle("fade");
-    });
-    burger.classList.toggle("toggle");
-  });
 };
+
+function linkAction() {
+  //active link
+  navLink.forEach(function (n) {
+    return n.classList.remove("active");
+  });
+  this.classList.add("active"); //remove menu mobile
+
+  var navMenu = document.getElementById("nav-menu");
+  navMenu.classList.remove("show");
+}
 },{"./scss/index.scss":"scss/index.scss"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -271,7 +263,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "36751" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38543" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
