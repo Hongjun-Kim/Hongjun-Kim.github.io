@@ -70,7 +70,7 @@ body {
   margin: $header-height 0 0 0;
   font-family: $body-font;
   font-size: $normal-font-size;
-  color: $dark-color;
+  color: white;
   line-height: 1.6;
 }
 h1,
@@ -99,6 +99,7 @@ i {
 //class
 .section {
   padding: 3rem 0;
+  margin-top: 3rem;
 }
 .section__title {
   font-size: $h2-font-size;
