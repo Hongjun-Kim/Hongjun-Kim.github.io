@@ -10,7 +10,7 @@
   }
 
   .nav__item {
-    margin-bottom: $mb-4;
+    margin-bottom: 7rem;
     .nav__link {
       color: $dark-color;
       font-weight: $font-semi;
@@ -28,6 +28,24 @@
   //show menu
   .show {
     right: 0;
+    li {
+      opacity: 0;
+      &:nth-child(1) {
+        animation: navLinkFade 0.5s ease forwards 0.3s;
+      }
+      &:nth-child(2) {
+        animation: navLinkFade 0.5s ease forwards 0.6s;
+      }
+      &:nth-child(3) {
+        animation: navLinkFade 0.5s ease forwards 0.9s;
+      }
+      &:nth-child(4) {
+        animation: navLinkFade 0.5s ease forwards 1.2s;
+      }
+      &:nth-child(5) {
+        animation: navLinkFade 0.5s ease forwards 1.5s;
+      }
+    }
   }
   .active {
     color: $first-color;
@@ -38,14 +56,34 @@
 .burger div {
   width: 25px;
   height: 3px;
-  background-color: rgb(226, 226, 226);
+  background-color: white;
   margin: 5px;
   transition: all 0.3s ease;
 }
 
+.nav__burger .line__1 {
+  transform: rotate(-45deg) translate(-4px, 6px);
+  margin: 11px;
+}
+.nav__burger .line__2 {
+  transform: rotate(45deg) translate(-4px, -6px);
+  margin: 11px;
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
 //media
 @include mq(768px) {
-  .nav__menu {
+  .nav__list {
     position: fixed;
     top: $header-height;
     right: -100%;

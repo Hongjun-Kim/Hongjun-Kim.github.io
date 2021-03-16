@@ -1,4 +1,4 @@
-// import nav from "./js/nav.js";
+// import { nav } from "./js/nav.js";
 import "./scss/index.scss";
 
 // -----------------------------Selectors------------------------
@@ -24,9 +24,12 @@ const initApp = () => {
 const showMenu = (toggleId, navId) => {
   const toggle = document.getElementById(toggleId),
     nav = document.getElementById(navId);
+  const burger = document.querySelector(".burger");
+  const navAni = document.querySelectorAll(".nav__item");
   if (toggle && nav) {
     toggle.addEventListener("click", () => {
       nav.classList.toggle("show");
+      burger.classList.toggle("nav__burger");
     });
   }
 };
@@ -38,4 +41,7 @@ function linkAction() {
   //remove menu mobile
   const navMenu = document.getElementById("nav-menu");
   navMenu.classList.remove("show");
+
+  const burger = document.querySelector(".burger");
+  burger.classList.remove("nav__burger");
 }

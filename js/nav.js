@@ -9,7 +9,7 @@ const links = document.querySelectorAll(".nav-links li");
 console.log(burger);
 
 // Event Listeners
-const nav = () => {
+export const nav = () => {
   burger.addEventListener("click", () => {
     navlinks.classList.toggle("open");
     if (burger.display - none) {
@@ -24,4 +24,4 @@ const nav = () => {
 };
 // funcions
 
-export default nav;
+// export default nav;

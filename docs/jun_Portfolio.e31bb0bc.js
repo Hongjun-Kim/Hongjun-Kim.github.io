@@ -194,7 +194,7 @@ module.hot.accept(reloadCSS);
 
 require("./scss/index.scss");
 
-// import nav from "./js/nav.js";
+// import { nav } from "./js/nav.js";
 // -----------------------------Selectors------------------------
 var navLink = document.querySelectorAll(".nav__link"); // -------------------------Event Listeners----------------------
 // Launch app
@@ -217,10 +217,13 @@ var initApp = function initApp() {
 var showMenu = function showMenu(toggleId, navId) {
   var toggle = document.getElementById(toggleId),
       nav = document.getElementById(navId);
+  var burger = document.querySelector(".burger");
+  var navAni = document.querySelectorAll(".nav__item");
 
   if (toggle && nav) {
     toggle.addEventListener("click", function () {
       nav.classList.toggle("show");
+      burger.classList.toggle("nav__burger");
     });
   }
 };
@@ -234,6 +237,8 @@ function linkAction() {
 
   var navMenu = document.getElementById("nav-menu");
   navMenu.classList.remove("show");
+  var burger = document.querySelector(".burger");
+  burger.classList.remove("nav__burger");
 }
 },{"./scss/index.scss":"scss/index.scss"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -263,7 +268,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "45455" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33225" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

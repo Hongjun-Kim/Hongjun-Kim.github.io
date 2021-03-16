@@ -20,8 +20,8 @@
         <div>
           <a href="#" class="nav__logo">Jun's H</a>
         </div>
-        <div class="nav__menu" id="nav-menu">
-          <ul class="nav__list">
+        <div class="nav__menu">
+          <ul class="nav__list" id="nav-menu">
             <li class="nav__item">
               <a href="#home" class="nav__link actve">home</a>
             </li>
@@ -188,14 +188,20 @@
           <h1 class="portfolio__title">PORTFOLIO</h1>
           <div class="view__container">
             <ul>
-              <li class="view__all"><a href="#">ALL</a></li>
-              <li class="view__all"><a href="#">webApp</a></li>
-              <li class="view__all"><a href="#">webSite</a></li>
-              <li class="view__all"><a href="#">JavaScript</a></li>
+              <li class="view__all"><a href="#" data-filter="all">ALL</a></li>
+              <li class="view__all">
+                <a href="#" data-filter="webapp">webApp</a>
+              </li>
+              <li class="view__all">
+                <a href="#" data-filter="website">webSite</a>
+              </li>
+              <li class="view__all">
+                <a href="#" data-filter="javascript">JavaScript</a>
+              </li>
             </ul>
           </div>
           <div class="box__container">
-            <div class="portfolio__box">
+            <div class="portfolio__box" data-item="website">
               <img src="/img.19567cfd.png" alt="" class="portfolio__img">
               <div class="portfolio__link">
                 <div class="portfolio__name">matialArtsManagement</div>
@@ -207,14 +213,14 @@
                 </div>
               </div>
             </div>
-            <div class="portfolio__box">
+            <div class="portfolio__box" data-item="webapp">
               <img src="/codingfarm.1bd24d93.png" alt="" class="portfolio__img">
               <div class="portfolio__link">
                 <div class="portfolio__name">codeFarm</div>
                 <div class="portfolio__buttons">
                   <a href="#" class="portfolio__link-a"><span class="font__inner">
                       <i class="fas fa-search-plus"></i> </span></a>
-                  <a href="#" class="portfolio__link-a"><span class="font__inner">
+                  <a href="https://github.com/Itwill7-3team/CodeFarm" class="portfolio__link-a"><span class="font__inner">
                       <i class="fas fa-link"></i> </span></a>
                 </div>
               </div>
@@ -244,21 +250,23 @@
     <!-- footer -->
     <footer class="footer section" id="footer">
       <div class="footer__container bg-grid">
-        <img src="/CoolText-JunsH.94f573fe.png" alt="" class="footer__img">
+        <a href="#">
+          <img src="/CoolText-JunsH.94f573fe.png" alt="" class="footer__img">
+        </a>
         <div class="footer__copy">
           &copy Copyright 2020. Porwered by <br>Honjun KIM
         </div>
         <div class="footer__icons">
-          <a href="#" class="footer_icons">
+          <a href="https://github.com/dromide" class="footer_icons">
             <i class="fab fa-github"></i>
           </a>
-          <a href="#" class="footer_icons">
+          <a href="https://dromide.github.io/" class="footer_icons">
             <i class="fab fa-blogger-b"></i>
           </a>
-          <a href="#" class="footer_icons">
+          <a href="https://www.linkedin.com/in/hongjun-kim-99718217a/" class="footer_icons">
             <i class="fab fa-linkedin-in"></i>
           </a>
-          <a href="#" class="footer_icons">
+          <a href="https://codepen.io/hongjun-kim" class="footer_icons">
             <i class="fab fa-codepen"></i>
           </a>
           <!-- <a href="#" class="footer_icons">
